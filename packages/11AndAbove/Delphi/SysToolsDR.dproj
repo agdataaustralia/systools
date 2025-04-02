@@ -49,7 +49,7 @@
     <PropertyGroup Condition="'$(Base)'!=''">
         <SanitizedProjectName>SysToolsDR</SanitizedProjectName>
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
-        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_DcuOutput>..\..\..\lib\$(Platform)\$(Config)</DCC_DcuOutput>
         <DCC_Description>TurboPack SysTools Delphi Runtime package</DCC_Description>
         <DCC_HppOutput>$(BDSCOMMONDIR)\hpp\$(Platform)</DCC_HppOutput>
         <DCC_ImageBase>00400000</DCC_ImageBase>
@@ -62,11 +62,13 @@
         <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1031</VerInfo_Locale>
+        <DCC_DcpOutput>..\..\..\lib\$(Platform)\$(Config)</DCC_DcpOutput>
+        <DCC_BplOutput>..\..\..\bin</DCC_BplOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Locale>3081</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
@@ -81,7 +83,7 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Locale>3081</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -98,81 +100,19 @@
         </DelphiCompile>
         <DCCReference Include="vcl.dcp"/>
         <DCCReference Include="vclx.dcp"/>
-        <DCCReference Include="..\..\..\source\StAstro.pas"/>
-        <DCCReference Include="..\..\..\source\StAstroP.pas"/>
-        <DCCReference Include="..\..\..\source\StBCD.pas"/>
-        <DCCReference Include="..\..\..\source\StBarC.pas"/>
         <DCCReference Include="..\..\..\source\StBase.pas"/>
         <DCCReference Include="..\..\..\source\StBits.pas"/>
         <DCCReference Include="..\..\..\source\StColl.pas"/>
-        <DCCReference Include="..\..\..\source\StConst.pas"/>
-        <DCCReference Include="..\..\..\source\StCRC.pas"/>
         <DCCReference Include="..\..\..\source\StDateSt.pas"/>
-        <DCCReference Include="..\..\..\source\StDict.pas"/>
-        <DCCReference Include="..\..\..\source\StDQue.pas"/>
-        <DCCReference Include="..\..\..\source\StEclpse.pas"/>
-        <DCCReference Include="..\..\..\source\StExpr.pas"/>
-        <DCCReference Include="..\..\..\source\StFIN.pas"/>
-        <DCCReference Include="..\..\..\source\StHASH.pas"/>
-        <DCCReference Include="..\..\..\source\StJup.pas"/>
-        <DCCReference Include="..\..\..\source\StJupsat.pas"/>
-        <DCCReference Include="..\..\..\source\StLArr.pas"/>
         <DCCReference Include="..\..\..\source\StList.pas"/>
-        <DCCReference Include="..\..\..\source\StMars.pas"/>
-        <DCCReference Include="..\..\..\source\StMath.pas"/>
-        <DCCReference Include="..\..\..\source\StMerc.pas"/>
-        <DCCReference Include="..\..\..\source\StMime.pas"/>
-        <DCCReference Include="..\..\..\source\StNVBits.pas"/>
-        <DCCReference Include="..\..\..\source\StNVColl.pas"/>
-        <DCCReference Include="..\..\..\source\StNVCont.pas"/>
-        <DCCReference Include="..\..\..\source\StNVDQ.pas"/>
-        <DCCReference Include="..\..\..\source\StNVDict.pas"/>
-        <DCCReference Include="..\..\..\source\StNVLAry.pas"/>
-        <DCCReference Include="..\..\..\source\StNVLMat.pas"/>
-        <DCCReference Include="..\..\..\source\StNVList.pas"/>
-        <DCCReference Include="..\..\..\source\StNVSCol.pas"/>
-        <DCCReference Include="..\..\..\source\StNVTree.pas"/>
-        <DCCReference Include="..\..\..\source\StNeptun.pas"/>
-        <DCCReference Include="..\..\..\source\StOStr.pas"/>
-        <DCCReference Include="..\..\..\source\StPluto.pas"/>
-        <DCCReference Include="..\..\..\source\StPQueue.pas"/>
         <DCCReference Include="..\..\..\source\StRegIni.pas"/>
-        <DCCReference Include="..\..\..\source\StSaturn.pas"/>
         <DCCReference Include="..\..\..\source\StSort.pas"/>
-        <DCCReference Include="..\..\..\source\StStat.pas"/>
         <DCCReference Include="..\..\..\source\StStrL.pas"/>
-        <DCCReference Include="..\..\..\source\StText.pas"/>
-        <DCCReference Include="..\..\..\source\StTree.pas"/>
-        <DCCReference Include="..\..\..\source\StUranus.pas"/>
         <DCCReference Include="..\..\..\source\StUtils.pas"/>
-        <DCCReference Include="..\..\..\source\StVArr.pas"/>
-        <DCCReference Include="..\..\..\source\StVInfo.pas"/>
-        <DCCReference Include="..\..\..\source\StVenus.pas"/>
         <DCCReference Include="..\..\..\source\StDate.pas"/>
-        <DCCReference Include="..\..\..\source\StBarPN.pas"/>
-        <DCCReference Include="..\..\..\source\StwmDCpy.pas"/>
-        <DCCReference Include="..\..\..\source\StToHTML.pas"/>
         <DCCReference Include="..\..\..\source\StSpawn.pas"/>
-        <DCCReference Include="..\..\..\source\StStrms.pas"/>
-        <DCCReference Include="..\..\..\source\StNet.pas"/>
-        <DCCReference Include="..\..\..\source\StNetApi.pas"/>
-        <DCCReference Include="..\..\..\source\StNetCon.pas"/>
-        <DCCReference Include="..\..\..\source\StNetPfm.pas"/>
-        <DCCReference Include="..\..\..\source\StNetMsg.pas"/>
-        <DCCReference Include="..\..\..\source\StRegEx.pas"/>
-        <DCCReference Include="..\..\..\source\StFirst.pas"/>
-        <DCCReference Include="..\..\..\source\StMerge.pas"/>
-        <DCCReference Include="..\..\..\source\StDecMth.pas"/>
-        <DCCReference Include="..\..\..\source\StMoney.pas"/>
-        <DCCReference Include="..\..\..\source\StNTLog.pas"/>
-        <DCCReference Include="..\..\..\source\StGenLog.pas"/>
-        <DCCReference Include="..\..\..\source\StRandom.pas"/>
-        <DCCReference Include="..\..\..\source\StIniStm.pas"/>
-        <DCCReference Include="..\..\..\source\St2DBarC.pas"/>
-        <DCCReference Include="..\..\..\source\StTxtDat.pas"/>
         <DCCReference Include="..\..\..\source\StSystem.pas"/>
-        <DCCReference Include="..\..\..\source\StPtrns.pas"/>
-        <DCCReference Include="..\..\..\source\StExpLog.pas"/>
+        <DCCReference Include="..\..\..\source\StConst.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
