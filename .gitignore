@@ -1,17 +1,17 @@
 
-Release
+## Release
 Debug
 __history
 *.stat
 *.local
 *.identcache
-*.dcu
+## *.dcu
 *.dsk
 *.~*
 *.obj
 *.tmp
 *.apk
-*.bpl
+## *.bpl
 *.cgi
 *.d
 *.dct
